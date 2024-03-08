@@ -17,18 +17,47 @@
 			}
 
 		</style>
-		<body>
+		</head>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="/handling">Handling Tools</a>
+			<button
+			  class="navbar-toggler"
+			  type="button"
+			  data-toggle="collapse"
+			  data-target="#navbarNavDropdown"
+			  aria-controls="navbarNavDropdown"
+			  aria-expanded="false"
+			  aria-label="Toggle navigation"
+			>
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/handling">Handling</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/guide">Guide</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/flags">Flags</a>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+		  
+		<body class="text-white" style="background-color: #242426;">
 			<main class="container-fluid mt-5 mx-auto">
 				<h1 class="text-center mt-3">Handling flags and stuff (WIP)</h1>
 				<div class="row mx-auto ">
 				
-				<div class="col-xxl-5 text-center mt-5 bg-whitesmoke border border-info p-5  mx-auto" id="modelFlagsSection">
-					<div class="alert alert-secondary mx-5" role="alert">
-						<h3 class="text-center mt-3">Model Flags Generator</h3>
+				<div class="col-xxl-5 text-center mt-5 p-5  mx-auto" style="" id="modelFlagsSection">
+					<div class="mx-5" style="background-color: transparent; color: white !important;" role="alert">
+						<h3 class="text-center mt-3" >Model Flags Generator</h3>
 						<p>Click on each item of the table to enable or disable a model flag.<br>Below the table, you'll get a number which contains all the flags you have enabled.</p>
 						<!-- <input id="modelFlagInput" class="text-center" maxlength="8" value="00440010"> -->
 					</div>
-					<div id="table" class="border border-gray bg-light container-fluid">
+					<div id="table" class="bg-dark container-fluid">
 						<div class="row">
 							<div class="col-sm-3 py-1 align-middle">IS_VAN</div>
 							<div class="col-sm-3 py-1 align-middle">IS_BUS</div>
@@ -78,19 +107,19 @@
 							<div class="col-sm-3 py-1 align-middle">IS_HATCHBACK</div>
 						</div>
 					</div>
-					<div class="border border-info bg-light mt-2">
+					<div class=" mt-2">
 						<h3 class="">Result</h3>
-						<div class="mb-2 mt-2 mx-auto text-center border d-inline border-dark bg-light container-fluid">&lt;strModelFlags&gt;<span class="text-muted"><strong id="modelFlags">00000000</strong></span>&lt;&frasl;strModelFlags&gt;</div><br>
+						<div class="mb-2 mt-2 mx-auto text-center border d-inline border-dark bg-light container-fluid" style="background-color: #313137 !important; border-radius: 0.5rem; padding: 0.3rem;">&lt;strModelFlags&gt;<span class="text-muted"><strong id="modelFlags">00000000</strong></span>&lt;&frasl;strModelFlags&gt;</div><br>
 						<div class="alert alert-warning mx-5 mt-3 d-inline-block" role="alert">Remember that some flags are can override each other.<br>For example, <i>IS_BUS</i> and <i>IS_VAN</i> will not work together.</div>
 					</div>
 				</div>
 
-				<div class="col-xxl-5 text-center bg-whitesmoke mt-5 border border-info p-5 mx-auto " id="handlingFlagsSection">
-					<div class="alert alert-secondary mx-5" role="alert">
-						<h3 class="text-center mt-3">Handling Flags Generator</h3>
+				<div class="col-xxl-5 text-center mt-5 p-5 mx-auto " id="handlingFlagsSection">
+					<div class="mx-5" role="alert" style="background-color: transparent; color: white !important;" >
+						<h3 class="text-center mt-3" >Handling Flags Generator</h3>
 						<p>Click on each item of the table to enable or disable a handling flag.<br>Below the table, you'll get a number which contains all the flags you have enabled.</p>
 					</div>
-					<div id="table" class=" border border-gray bg-light container-fluid">
+					<div id="table" class=" text-white bg-dark container-fluid">
 						<div class="row">
 							<div class="col-sm-3 py-1 align-middle">SMOOTH_COMPRESN</div>
 							<div class="col-sm-3 py-1 align-middle">REDUCED_MOD_MASS</div>
@@ -140,10 +169,10 @@
 							<div class="col-sm-3 py-1 align-middle"></div>
 						</div>
 					</div>
-					<div class="border border-info bg-light mt-2">
+					<div class="mt-2">
 						<h3 class="">Result</h3>
 						
-						<div class="mb-2 mt-2 mx-auto text-center border  d-inline border-dark bg-light container-fluid">&lt;strHandlingFlags&gt;<span class="text-muted"><strong id="handlingFlags">00000000</strong></span>&lt;&frasl;strHandlingFlags&gt; </div><br>
+						<div class="mb-2 mt-2 mx-auto text-center border  d-inline border-dark bg-light container-fluid" style="background-color: #313137 !important; border-radius: 0.5rem; padding: 0.3rem;">&lt;strHandlingFlags&gt;<span class="text-muted"><strong id="handlingFlags">00000000</strong></span>&lt;&frasl;strHandlingFlags&gt; </div><br>
 	
 						<div class="alert alert-warning mx-5 mt-3 d-inline-block" role="alert">Remember that some flags are can override each other.<br>For example, <i>STEER_REARWHEELS</i> and <i>STEER_ALL_WHEELS</i> will not work together.</div>
 					</div>

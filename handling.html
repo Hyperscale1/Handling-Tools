@@ -7,12 +7,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./style.css">
 
 
 
@@ -20,10 +19,40 @@
     <title>Handling</title>
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/handling">Handling Tools</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/handling">Handling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/guide">Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/flags">Flags</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+  
 
-<body>
+
+<body class="text-white" style="background-color: #242426;">
     <div>
-        <small class="float-right px-1 text-muted">0.3.5 - Added mass comparer</small><br>
+
         <div class="text-center">
             <span class="display-4">Handling Editor</span><br>
             <span class="mt-2">Edit handling files easily, and quickly.</span>
@@ -48,7 +77,7 @@
                 <div class="">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input " id="handlingFileLoader">
-                        <label class="custom-file-label" for="handlingFileLoader">Select a handling.meta file...</label>
+                        <label class="custom-file-label " for="handlingFileLoader">Select a handling.meta file...</label>
                     </div>
                 </div>
 
@@ -67,7 +96,7 @@
     <div class="alert alert-warning alert w-25 mx-auto text-center d-none" role="alert" id="wEmptyFile">Load a handling
         file first.</div>
 
-    <div class="container-fluid border py-2 px-5 mb-5" style="max-width:1500px">
+    <div class="container-fluid py-2 px-5 mb-5" style="max-width:1500px">
         <!-- Tab links -->
         <ul class="nav nav-tabs justify-content-center">
 
@@ -115,14 +144,14 @@
 
                 <div class="row pb-4 px-3">
 
-                    <div class="border mt-3">
+                    <div class="mt-3">
                         <h3 class="text-center py-1">Aero</h3>
                         <p class="px-5 text-center">This set of values represent the vehicle body shape, and mostly
                             affect top speed behavior.</p>
                         <hr>
                         <div class="d-flex align-content-around px-3">
                             <div class="w-50 p-5">
-                                <div class="bg-light border border-rounded p-4">
+                                <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                     <h3 class="text-center">Downforce</h3>
                                     <p class="text-muted text-center">fDownforceModifier</p>
                                     <canvas id="downforceChart" width="100" height="50"></canvas>
@@ -174,7 +203,7 @@
                                 </div>
                             </div>
                             <div class="w-50 p-5">
-                                <div class="bg-light border border-rounded p-4">
+                                <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                     <h3 class="text-center">Air Resistance</h3>
                                     <p class="text-muted text-center">fInitialDragCoeff</p>
                                     <canvas id="airdragChart" width="100" height="50"></canvas>
@@ -222,7 +251,7 @@
             <div class="pb-5  tab-pane fade " id="chassis" role="tabpanel" aria-labelledby="chassis-tab">
 
                 <div class="row pb-4 px-3">
-                    <div class="border mt-3">
+                    <div class=" mt-3">
                         <h3 class="text-center py-1">Chassis</h3>
                         <p class="px-5 text-center">This set of values represent the vehicle body itself, and will play
                             a big role on how the vehicle behaves overall.</p>
@@ -230,7 +259,7 @@
 
                         <div class="row px-3">
                             <div class="col-md-4">
-                                <div class="bg-light border border-rounded p-4">
+                                <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                     <h3 class="text-center">Mass </h3>
                                     <p class="text-muted text-center">fMass</p>
                                     <div class="d-flex align-content-center">
@@ -258,7 +287,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="bg-light border border-rounded p-4">
+                                <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
 
                                     <h3 class="text-center">Center of Mass</h3>
                                     <p class="text-muted text-center">vecCentreOfMassOffset</p>
@@ -278,7 +307,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="bg-light border border-rounded p-4">
+                                <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                     <h3 class="text-center">Rotational Inertia</h3>
                                     <p class="text-muted text-center">vecInertiaMultiplier</p>
 
@@ -301,7 +330,7 @@
                 </div>
             </div>
             <div class="pb-5  tab-pane fade" id="engine" role="tabpanel" aria-labelledby="engine-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Engine</h3>
                     <p class="px-5 text-center">The moving force of your vehicle, this set of values govern details
                         about how different bits of the engine will behave.
@@ -311,7 +340,7 @@
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Power / Acceleration</h3>
                                 <p class="text-muted text-center">fInitialDriveForce</p>
                                 <canvas id="powerChart" width="100" height="75" class="mx-auto"></canvas>
@@ -342,7 +371,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Drive inertia</h3>
                                 <p class="text-muted text-center">fDriveInertia</p>
 
@@ -376,7 +405,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
 
                                 <h3 class="text-center">Top Speed</h3>
                                 <p class="text-muted text-center">fInitialDriveMaxFlatVel</p>
@@ -404,14 +433,14 @@
                 </div>
             </div>
             <div class="pb-5 tab-pane fade" id="transmission" role="tabpanel" aria-labelledby="transmission-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Transmission</h3>
                     <p class="px-5 text-center">Together with the Engine, the transmission settings define the power
                         output of your vehicle.</p>
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
 
                                 <h3 class="text-center">Nº of Gears</h3>
                                 <p class="text-muted text-center">nInitialDriveGears</p>
@@ -436,7 +465,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Shift times</h3>
                                 <p class="text-muted text-center">fClutchChangeRateScaleUpShift</p>
                                 <div class="d-flex align-content-center">
@@ -468,7 +497,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Power Bias</h3>
                                 <p class="text-muted text-center">fDriveBiasFront</p>
 
@@ -493,7 +522,7 @@
                 </div>
             </div>
             <div class="pb-5 tab-pane fade" id="brakes" role="tabpanel" aria-labelledby="brakes-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Brakes</h3>
                     <p class="px-5 text-center">Brakes are one of the main defining factors of the performance of your
                         vehicle. <br>This value should complement both the vehicle's power and traction, so as to keep a
@@ -504,7 +533,7 @@
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Brake Strength</h3>
                                 <p class="text-muted text-center">fBrakeForce</p>
                                 <div class="d-flex align-content-center">
@@ -529,7 +558,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Brake Bias</h3>
                                 <p class="text-muted text-center">fBrakeBiasFront</p>
                                 <div class="d-flex align-content-center">
@@ -552,7 +581,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Handbrake Strength</h3>
                                 <p class="text-muted text-center">fHandBrakeForce</p>
 
@@ -572,7 +601,7 @@
                 </div>
             </div>
             <div class="pb-5 tab-pane fade" id="traction" role="tabpanel" aria-labelledby="traction-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Traction</h3>
                     <p class="px-5 text-center">Traction is the main limiter of power and braking ability, and has to be
                         able to handle both; otherwise your vehicle may suffer wheelspin/wheel lock.
@@ -582,7 +611,7 @@
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Tire Grip</h3>
                                 <p class="text-muted text-center">fTractionCurveMax</p>
                                 <div class="d-flex align-content-center">
@@ -620,7 +649,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Traction Curve</h3>
                                 <p class="text-muted text-center">fTractionCurveLateral</p>
                                 <div class="d-flex align-content-center">
@@ -647,7 +676,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Tire Grip Bias</h3>
                                 <p class="text-muted text-center">fTractionBiasFront</p>
                                 <div class="d-flex align-content-center">
@@ -674,7 +703,7 @@
                     </div>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Offroad Traction Loss</h3>
                                 <p class="text-muted text-center">fTractionLossMult</p>
                                 <div class="d-flex align-content-center">
@@ -697,7 +726,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Low Speed Burnout Mult</h3>
                                 <p class="text-muted text-center">fLowSpeedTractionLossMult</p>
                                 <div class="d-flex align-content-center">
@@ -714,7 +743,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Max Steer Angle</h3>
                                 <p class="text-muted text-center">fSteeringLock</p>
                                 <div class="d-flex align-content-center">
@@ -733,14 +762,14 @@
                 </div>
             </div>
             <div class="pb-5 tab-pane fade" id="suspension" role="tabpanel" aria-labelledby="suspension-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Suspension</h3>
                     <p class="px-5 text-center">Stiffer, softer, loose, tight.<br> This section governs how your car
                         floats above its wheels.</p>
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Spring Strength</h3>
                                 <p class="text-muted text-center">fSuspensionForce</p>
                                 <div class="d-flex align-content-center">
@@ -757,7 +786,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Spring Dampen Strength</h3>
                                 <p class="text-muted text-center">fSuspensionCompDamp</p>
                                 <div class="d-flex align-content-center">
@@ -786,7 +815,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Compression/Decompression Limits</h3>
                                 <p class="text-muted text-center">fSuspensionUpperLimit</p>
                                 <div class="d-flex align-content-center">
@@ -817,7 +846,7 @@
                     </div>
                     <div class="row pb-4 px-3">
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Suspension Raise</h3>
                                 <p class="text-muted text-center">fSuspensionRaise</p>
                                 <div class="d-flex align-content-center">
@@ -834,7 +863,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Strength Bias</h3>
                                 <p class="text-muted text-center">fSuspensionBiasFront</p>
                                 <div class="d-flex align-content-center">
@@ -854,7 +883,7 @@
                 </div>
             </div>
             <div class="pb-5 tab-pane fade" id="antiroll" role="tabpanel" aria-labelledby="antiroll-tab">
-                <div class="border mt-3">
+                <div class="mt-3">
                     <h3 class="text-center py-1">Anti-roll Bars</h3>
                     <p class="px-5 text-center">The main goal of the Anti-roll Bars is to prevent the car from leaning
                         too much when taking a corner.<br>
@@ -863,7 +892,7 @@
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Antiroll Strength</h3>
                                 <p class="text-muted text-center">fAntiRollBarForce</p>
                                 <div class="d-flex align-content-center">
@@ -880,7 +909,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Strength Bias</h3>
                                 <p class="text-muted text-center">fAntiRollBarBiasFront</p>
                                 <div class="d-flex align-content-center">
@@ -900,7 +929,7 @@
                     <hr>
                     <div class="row pb-4 px-3">
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Rollcentre - Front</h3>
                                 <p class="text-muted text-center">fRollCentreHeightFront</p>
                                 <div class="d-flex align-content-center">
@@ -918,7 +947,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="bg-light border border-rounded p-4">
+                            <div class="bg-dark border border-rounded p-4" style="border-radius: 1rem;">
                                 <h3 class="text-center">Rollcentre - Back</h3>
                                 <p class="text-muted text-center">fRollCentreHeightRear</p>
                                 <div class="d-flex align-content-center">
@@ -942,7 +971,7 @@
                 <div class="alert alert-warning mt-3" role="alert">Don't edit the values in here. This area serves only
                     as a preview of the file.</div>
                 <textarea type="textarea" value="" id="handlingFileDisplay" style="min-height:1000px;"
-                    class="mt-5 w-100 bg-light text-success" disabled></textarea>
+                    class="mt-5 w-100 bg-dark text-success" disabled></textarea>
 
             </div>
 
@@ -950,7 +979,7 @@
 
                 <div class=" pb-4 px-3">
 
-                    <div class="border mt-3">
+                    <div class=" mt-3">
 
                         <h3 class="text-center py-1">Metrics</h3>
                         <div class="px-5 mx-5">
@@ -969,7 +998,7 @@
                         </div>
                         <div class="mx-5">
 
-                            <table class="table border ">
+                            <table class="table text-white" >
                                 <thead>
                                     <tr>
                                         <th scope="col">Handling item</th>
@@ -1037,7 +1066,7 @@
 
                 <div class=" pb-4 px-3">
 
-                    <div class="border mt-3">
+                    <div class="mt-3">
 
                         <h3 class="text-center py-1">Mass comparer</h3>
                         <div class="w-50 mx-auto">
@@ -1079,9 +1108,9 @@
                             <small class="float-right px-1 text-muted">
                                 <i>Click on the table headers to sort by that row.</i>
                             </small>
-                            <table id="tablecompare" class="table mx-auto border">
+                            <table id="tablecompare" class="table mx-auto">
                                 <thead>
-                                    <tr class="bg-light">
+                                    <tr class="bg-dark text-white">
                                         <th scope="col" onclick="sortTable(0)">ID</th>
                                         <th scope="col" onclick="sortTable(1)">Tyre Grip</th>
                                         <th scope="col" onclick="sortTable(2)">Acceleration</th>
@@ -1092,7 +1121,7 @@
                                         <th scope="col" onclick="sortTable(7)">Brakes</th>
                                     </tr>
                                 </thead>
-                                <tbody id="tbodycompare" style="min-height: 500px;">
+                                <tbody id="tbodycompare" style="min-height: 500px;" class="text-white">
                                     <tr>
                                         <td>EXAMPLE</td>
                                         <td>0.0</td>
@@ -1160,9 +1189,9 @@
                 </div>
             </div>
 
-            <div class="bg-light border">
+            <div>
                 <h3 class="text-center">Comparisons</h3>
-                <hr>
+                <hr style="background-color: white;">
                 <div class="w-25 mx-auto mb-5">
                     <p>You can add a comparison item for in the graphs by uploading another handling file here.</p>
                     <div class="custom-file">
@@ -1175,13 +1204,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="border-radius: 1rem; padding: 1rem;">
                         <h3 class="text-center">Simplified Stats</h3>
                         <p class="text-center">The main measures, translated to a 0 - 100 score.</p>
                         <canvas id="statsChart" width="100" height="50" class="mx-auto"></canvas>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6" style=" border-radius: 1rem; padding: 1rem;">
                         <h3 class="text-center">Performance Index</h3>
                         <p class="text-center">
                             Current vehicle: $<span class="text-danger" id="currentPrice"></span> - Comparison
@@ -1195,12 +1224,7 @@
 
             </div>
             <pre id="handlingArray" class="bg-info border d-none"></pre>
-            <footer class="my-5">
-                <p class="text-center bg-light border py-3">Stitched up together using from
-                    <strong>Bootstrap</strong>,
-                    <strong>Charts.js</strong> and <strong>Notify.js</strong>.
-                </p>
-            </footer>
+    
         </div>
 </body>
 <script>
